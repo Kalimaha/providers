@@ -1,0 +1,5 @@
+#!/usr/local/bin/python
+from provider.controllers.application import app
+
+
+app.run()
