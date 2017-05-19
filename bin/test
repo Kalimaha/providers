@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ $1 == "flask" ] || [ $1 == "f" ]
+  then
+    (cd flask-provider; python3 setup.py test)
+elif [ $1 == "django" ]
+  then
+    echo $1
+else
+  echo "Available parameters:"
+  echo "-----------------------------------------"
+  echo "flask, f:............Test Flask provider"
+  echo "django, d:...........Test Django provider"
+  echo "pyramid, p:..........Test Django provider"
+  echo "-----------------------------------------"
+fi
