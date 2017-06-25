@@ -6,7 +6,9 @@ else
   PORT=8000
 fi
 
-gunicorn provider/controllers/application_controller:app \
+echo $PORT
+
+gunicorn provider.controllers.application_controller:app \
   -b 127.0.0.1:$PORT \
   -p flask.pid \
   --daemon
